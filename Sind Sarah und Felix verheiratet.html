@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verheiratet?</title>
+	<style>
+		body {
+			background-color: #f9f9f9;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		h1 {
+			margin-top: 50px;
+			color: #333333;
+			font-size: 3em;
+			text-shadow: 1px 1px 1px #cccccc;
+		}
+		
+		p {
+			color: #666666;
+			font-size: 1.2em;
+			margin-bottom: 20px;
+		}
+		
+		button {
+			padding: 10px 20px;
+			background-color: #3366cc;
+			color: #ffffff;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.2em;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+		}
+		
+		button:hover {
+			background-color: #0044cc;
+		}
+		
+		#result {
+			margin-top: 50px;
+			font-size: 4em;
+			color: #333333;
+			text-shadow: 1px 1px 1px #cccccc;
+		}
+	</style>
+</head>
+<body>
+	<h1>Sind Felix und Sarah verheiratet?</h1>
+	<p>Klicken Sie auf den Button, um die Antwort zu sehen:</p>
+	<button onclick="checkMarriage()">Klicken Sie hier</button>
+	<div id="result"></div>
+
+	<script>
+		function checkMarriage() {
+			var today = new Date();
+			var weddingDay = new Date("2023-04-01T13:00:00");
+
+			if (today < weddingDay) {
+				document.getElementById("result").innerHTML = "Nein";
+			} else {
+				document.getElementById("result").innerHTML = "Ja";
+			}
+		}
+	</script>
+</body>
+</html>
